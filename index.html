@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+    <!-- tailwind and daisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .status-cards-container {
+        position: relative;
+        z-index: 1;
+      }
+      .status-cards {
+        margin-top: -50%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .status-card {
+        flex: 0 0 calc(33.33% - 1rem); /* Adjust card width */
+      }
+    </style>
+  </head>
+  <body class="mt-0">
+    <header>
+      <!-- Background image container -->
+      <div
+        class="min-h-screen bg-[url(images/banner.png)] bg-no-repeat bg-center relative"
+      >
+        <div
+          class="absolute inset-0 flex flex-col justify-center items-center gap-5 text-white text-center"
+        >
+          <h1 class="text-4xl font-bold">
+            End-to-End Travel with <br />
+            <span class="text-green-500"> P Paribahan</span>
+          </h1>
+          <p>
+            Yes, you can run unit tests and view the results directly within the
+            app. The <br />
+            integrated testing features allow for a streamlined .
+          </p>
+          <button class="btn bg-green-500 text-white border-none">
+            Buy Now
+          </button>
+        </div>
+      </div>
+      <!-- Status cards -->
+
+      <div class="relative flex justify-center mt-[-220px]">
+        <div class="flex justify-between gap-24">
+          <div
+            class="flex items-center gap-2 border-b-4 border-green-500 p-2 rounded-lg bg-white"
+          >
+            <img src="images/people.png" alt="" />
+            <div>
+              <h2 class="text-3xl font-bold">500K+</h2>
+              <p>Registered User</p>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-2 border-b-4 border-green-500 p-2 rounded-lg bg-white"
+          >
+            <img src="images/ticket-cupon.png" alt="" />
+            <div>
+              <h2 class="text-3xl font-bold">1.7 lacks</h2>
+              <p>Ticket Sold</p>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-2 border-b-4 border-green-500 p-2 rounded-lg bg-white"
+          >
+            <img src="images/stoppage.png" alt="" />
+            <div>
+              <h2 class="text-3xl font-bold">80K+</h2>
+              <p>Rental Partners</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="bg-gray-200 rounded-lg">
+      <!-- paribahan -->
+      <h1 class="text-4xl text-center my-10">P.H Paribahan</h1>
+      <p class="text-center">
+        Yes, you can run unit tests and view the results directly within the
+        app. The integrated <br />
+        testing features allow for a streamlined .
+      </p>
+      <!--paribahan section-->
+      <section
+        class="bg-slate-50 rounded-lg p-10 mb-96 flex justify-between w-[1170px] mx-auto"
+      >
+        <div>
+          <div class="flex justify-between">
+            <div class="flex">
+              <img src="images/bus-logo.png " alt="" />
+              <div class="ml-4">
+                <h2 class="text-xl font-bold">Greenline Paribahan</h2>
+                <p class="text-nowrap">Coach-009-WEB ! AC_Business</p>
+              </div>
+            </div>
+            <div
+              class="flex bg-[#1DD10026] rounded-lg p-3 text-xl text-green-500"
+            >
+              <img src="images/seat-green.png" alt="" />
+              <p>40 Seats left</p>
+            </div>
+          </div>
+          <div class="bg-slate-200 rounded-lg">
+            <div class="flex justify-between p-4">
+              <p>Route</p>
+              <p class="font-bold">Dhaka-Sylhet</p>
+            </div>
+            <hr />
+            <div class="flex justify-between p-4">
+              <p>Departure Time</p>
+              <p class="font-bold">9:00 PM</p>
+            </div>
+            <!-- route -->
+            <div class="flex justify-between p-2">
+              <div class="bg-gray-300 p-2 rounded-lg font-semibold w-[220px]">
+                <p>Boarding Point - Laxmipur</p>
+              </div>
+              <div class="bg-gray-300 p-2 rounded-lg font-semibold w-[220px]">
+                <p>Dropping Point - Bogura</p>
+              </div>
+              <div class="bg-gray-300 p-2 rounded-lg font-semibold w-[220px]">
+                <p>Est. Time - 11 Hour</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src="images/fare.png" alt="" />
+          <h1 class="font-bold">550 Taka</h1>
+          <p>Per Seat</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
