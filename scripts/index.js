@@ -37,6 +37,15 @@ phoneNo.addEventListener('input',function(){
     }
 })
 
+// scroll
+
+const scrollButton = document.getElementById('buy-now');
+const form = document.getElementById('main');
+
+scrollButton.addEventListener('click', function() {
+    form.scrollIntoView({ behavior: 'smooth' });
+});
+
 
 const leftSeat = document.getElementById('seat-left').innerText;
 let convertedSeatLeft = parseInt(leftSeat);
