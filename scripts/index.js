@@ -11,14 +11,14 @@ for (const seat of seats) {
         
         
         selectedSeats.add(seat.innerText);
-        // Change background color on click
+        
         seat.style.backgroundColor = '#1DD100';
 
         // Update the selected seat count
         selectedSeatCount++;
         document.getElementById('seat-number').innerText = selectedSeatCount;
 
-        // Take the ticket
+        
         const ticketName = event.target.innerText;
 
         // Update ticket information
@@ -64,7 +64,7 @@ const scrollButton = document.getElementById('buy-now');
 const form = document.getElementById('main');
 
 scrollButton.addEventListener('click', function() {
-    form.scrollIntoView({ behavior: '' });
+    form.scrollIntoView({ behavior: ''});
 });
 
 
@@ -72,7 +72,7 @@ const leftSeat = document.getElementById('seat-left').innerText;
 let convertedSeatLeft = parseInt(leftSeat);
 
 function calculateLeftSeat(){
-    convertedSeatLeft = convertedSeatLeft - 1;
+    convertedSeatLeft= convertedSeatLeft- 1;
     return convertedSeatLeft;   
 }
 
