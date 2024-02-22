@@ -27,6 +27,17 @@ for(const seat of seats){
         document.getElementById('seat-left').innerText = convertedSeatLeft;
     })
 }
+
+const phoneNo = document.getElementById('phone-no');
+const nextBtn = document.getElementById('next-button');
+
+phoneNo.addEventListener('input',function(){
+    if(phoneNo.value.trim() !== ''){
+        nextBtn.removeAttribute('disabled');
+    }
+})
+
+
 const leftSeat = document.getElementById('seat-left').innerText;
 let convertedSeatLeft = parseInt(leftSeat);
 
