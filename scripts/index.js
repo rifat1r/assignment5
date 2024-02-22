@@ -1,12 +1,27 @@
 const seats = document.getElementsByClassName('seat');
-for(const seat of seats){
-    seat.addEventListener('click',
-    function(event){
-        //change bg color on click
+let selectedSeatCount = 0; 
+let selectedSeats = new Set(); 
+
+for (const seat of seats) {
+    seat.addEventListener('click', function(event) {
+        
+        if (selectedSeats.has(seat.innerText)) {
+            return; 
+        }
+        
+        
+        selectedSeats.add(seat.innerText);
+        // Change background color on click
         seat.style.backgroundColor = '#1DD100';
-        //take the ticket
+
+        // Update the selected seat count
+        selectedSeatCount++;
+        document.getElementById('seat-number').innerText = selectedSeatCount;
+
+        // Take the ticket
         const ticketName = event.target.innerText;
-        // console.log(ticketName);
+
+        // Update ticket information
         const ticketPlace = document.getElementById('ticket-place');
         const ticketDiv = document.createElement('div');
         const p = document.createElement('p');
@@ -19,14 +34,20 @@ for(const seat of seats){
         ticketDiv.appendChild(p);
         ticketDiv.appendChild(p2);
         ticketDiv.appendChild(p3);
-        //total price calculation
-        calculateTotal()
+
+        // Total price calculation
+        calculateTotal();
         document.getElementById('total-price').innerText = total;
-        couponCheck()
-        calculateLeftSeat()
+        
+        // Apply coupon check
+        couponCheck();
+
+        // Update remaining seats
+        calculateLeftSeat();
         document.getElementById('seat-left').innerText = convertedSeatLeft;
-    })
+    });
 }
+
 
 const phoneNo = document.getElementById('phone-no');
 const nextBtn = document.getElementById('next-button');
@@ -43,7 +64,7 @@ const scrollButton = document.getElementById('buy-now');
 const form = document.getElementById('main');
 
 scrollButton.addEventListener('click', function() {
-    form.scrollIntoView({ behavior: 'smooth' });
+    form.scrollIntoView({ behavior: '' });
 });
 
 
