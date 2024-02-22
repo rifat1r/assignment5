@@ -158,7 +158,7 @@
               class="flex bg-[#1DD10026] rounded-lg p-3 text-xl text-green-500"
             >
               <img src="images/seat-green.png" alt="" />
-              <p>40 Seats left</p>
+              <p><span id="seat-left">40</span> Seats left</p>
             </div>
           </div>
           <div class="bg-slate-200 rounded-lg">
@@ -206,7 +206,7 @@
               </div>
               <div class="flex">
                 <img src="images/seat-green-filled.png" alt="" />
-                <p>selected</p>
+                <p class="text-green-500">selected</p>
               </div>
             </div>
             <hr class="border-t-2 border-gray-300" />
@@ -218,7 +218,7 @@
               />
             </div>
             <div class="flex">
-              <div onclick="selectSeat()" class="seat">A1</div>
+              <div class="seat">A1</div>
               <div class="seat">A2</div>
               <div class="seat">A3</div>
               <div class="seat">A4</div>
@@ -302,11 +302,15 @@
               </div>
               <div class="flex">
                 <input
+                  id="coupon-input"
                   class="px-10 rounded-lg mr-8"
                   type="text"
                   placeholder="Have any copupon"
                 />
-                <button class="btn bg-green-500 rounded-lg text-white">
+                <button
+                  onclick="couponCheck()"
+                  class="btn bg-green-500 rounded-lg text-white"
+                >
                   Apply
                 </button>
               </div>
